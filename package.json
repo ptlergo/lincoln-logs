@@ -1,8 +1,8 @@
 {
   "name": "lincoln-logs",
-  "version": "1.0.0",
-  "description": "Abraham Lincoln themed debug tool.",
-  "main": "index.js",
+  "version": "1.0.1",
+  "description": "Honest debugging.",
+  "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
     "test": "mocha --reporter nyan"
@@ -11,6 +11,21 @@
     "type": "git",
     "url": "git+https://github.com/ptlergo/lincoln-logs.git"
   },
+  "keywords": [
+ "tool",
+ "lincoln-logs",
+ "lincoln",
+ "lincolnlogs",
+ "logger",
+ "logging",
+ "logs",
+ "log",
+ "debug",
+ "debug-squasher",
+ "debugger",
+ "utility",
+ "util",
+],
   "author": "Patrick Funom",
   "license": "ISC",
   "bugs": {

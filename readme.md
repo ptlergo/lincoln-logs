@@ -6,7 +6,7 @@ Perfect for testing models, and routes.
 ## Install
 
 ```
-npm install lincoln-logs --save
+npm install lincoln-logs --save-dev
 ```
 
 ## Usage
