@@ -24,7 +24,7 @@
  "debug-squasher",
  "debugger",
  "utility",
- "util",
+ "util"
 ],
   "author": "Patrick Funom",
   "license": "ISC",
