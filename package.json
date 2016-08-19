@@ -4,8 +4,33 @@
   "description": "Abraham Lincoln themed debug tool.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js",
+    "test": "mocha --reporter nyan"
   },
-  "author": "Patrick Funom Tunga-Lergo",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ptlergo/lincoln-logs.git"
+  },
+  "author": "Patrick Funom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ptlergo/lincoln-logs/issues"
+  },
+  "homepage": "https://github.com/ptlergo/lincoln-logs#readme",
+  "dependencies": {
+    "mocha": "3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "3.2.2",
+    "eslint-config-airbnb": "10.0.0",
+    "eslint-plugin-import": "1.12.0",
+    "eslint-plugin-jsx-a11y": "2.0.1",
+    "eslint-plugin-react": "6.0.0",
+    "supertest": "2.0.0",
+    "faker": "3.1.0",
+    "chai": "3.5.0",
+    "colors": "1.1.2",
+    "dotenv": "2.0.0",
+    "log-symbols": "1.0.2"
+  }
 }
