@@ -1,10 +1,8 @@
 # lincoln-logs
-
-A simple debug tool to display debug messages where needed.
-Perfect for testing models, and routes.
+A honest debugging tool.
 
 ## Install
-
+Install all 'lincoln-logs' as a dev-dependency
 ```
 npm install lincoln-logs --save-dev
 ```
@@ -12,15 +10,17 @@ npm install lincoln-logs --save-dev
 ## Usage
 Create a `log` folder in your project with the file `lincoln.log`. This will be to save all your debug messages.
 ```
-/log/lincoln.log
+/logs/lincoln.log
 ```
+
 Require the tool package.
 ``` javascript
 const util = require('lincoln-logs');
 ```
 
 ### .debug
-user can decide what the output message should be. A 2nd parameter is available for data output object.
+Call the method 'debug' that accepts an object with two keys 'msg', and 'info'.
+*developer can add additional keys if needed but must configure in tool file*
 ``` javascript
 util.debug({msg: 'message', info: object })
 ```
