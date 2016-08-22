@@ -1,3 +1,4 @@
+[ ![Codeship Status for ptlergo/lincoln-logs](https://codeship.com/projects/b830ccd0-4a7b-0134-67f7-62ab521e7ba6/status?branch=master)](https://codeship.com/projects/169666)
 # lincoln-logs
 A honest debugging tool.
 
