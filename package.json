@@ -1,8 +1,12 @@
 {
   "name": "lincoln-logs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Honest debugging.",
   "main": "src/index.js",
+  "engines": {
+  "node": "6.2.0",
+  "npm": "3.8.9"
+  },
   "scripts": {
     "start": "node src/index.js",
     "test": "mocha --reporter nyan"
@@ -24,7 +28,7 @@
  "debug-squasher",
  "debugger",
  "utility",
- "util",
+ "util"
 ],
   "author": "Patrick Funom",
   "license": "ISC",
@@ -45,7 +49,6 @@
     "faker": "3.1.0",
     "chai": "3.5.0",
     "colors": "1.1.2",
-    "dotenv": "2.0.0",
     "log-symbols": "1.0.2"
   }
 }
