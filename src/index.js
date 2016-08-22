@@ -19,6 +19,7 @@ const printTime = '[ ' + timeIso + ' ]';
 
 // Debug method
 exports.debug = (obj) => {
+  const filePath = './logs/lincoln.log';
   const msg = '[ ' + obj.msg + ']';
   const info = obj.info;
   const success = 'finished successfully';
@@ -27,7 +28,7 @@ exports.debug = (obj) => {
   // DISPLAY only when DEBUG=true
   if (process.env.DEBUG) {
     // Write to log file
-    fs.appendFile('./logs/lincoln.log', statement, { flag: 'a' },
+    fs.appendFile(filePath, statement, { flag: 'a' },
       (err) => { if (err) { throw err; } }
     );// END of appendFile
 
