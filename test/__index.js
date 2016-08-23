@@ -22,3 +22,11 @@ describe('Util Tool', () => {
     done();
   });
 });// END of Util Tool describe
+
+// Version Increaser
+describe('Version Increaser', () => {
+  it('Should Increase The Version Number', (done) => {
+    expect(util.bump).to.not.equal(null);
+    done();
+  });
+});
