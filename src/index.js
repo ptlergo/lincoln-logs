@@ -25,21 +25,25 @@ exports.debug = (obj) => {
   const success = 'finished successfully';
   const statement = obj.msg + obj.info + '\n';
 
-  // DISPLAY only when DEBUG=true
-  if (process.env.DEBUG) {
-    // Write to log file
-    fs.appendFile(filePath, statement, { flag: 'a' },
-      (err) => { if (err) { throw err; } }
-    );// END of appendFile
-
-    if (obj.info === 'err' || obj.info === 'undefined') {
-      throw console.log(logSymbols.fail, 'ERROR!');
+// Version Number Increaser
+exports.bump = (oldVersion, UpdateVersion) => {
+  let major = oldVersion.major;
+  let minor = oldVersion.minor;
+  let patch = oldVersion.patch;
+  if (UpdateVersion) {
+    if (UpdateVersion === 'major') {
+      major += 1;
     }
-    // Display formatted debug log
-    console.log('\n', printTime.prompt,
-    '\n', msg.help, '\n ', info, '\n',
-     '[ '.win, logSymbols.success, success.win, logSymbols.success, ' ]\n'.win);
+    if (UpdateVersion === 'minor') {
+      minor += 1;
+    }
+    if (UpdateVersion === 'patch') {
+      major += 1;
+      minor = 0;
+      patch = 0;
+    }
+  } else {
+    console.warn('Enter major, minor, or patch as a 2nd param');
   }
-
-  return obj;
+  console.log('New Version Number: ' + major + '.' + minor + '.' + patch);
 };
