@@ -33,17 +33,18 @@ exports.bump = (oldVersion, UpdateVersion) => {
   if (UpdateVersion) {
     if (UpdateVersion === 'major') {
       major += 1;
+      minor  = 0;
+      patch  = 0;
     }
     if (UpdateVersion === 'minor') {
       minor += 1;
+      patch  = 0;
     }
     if (UpdateVersion === 'patch') {
-      major += 1;
-      minor = 0;
-      patch = 0;
+      patch += 1;
     }
   } else {
     console.warn('Enter major, minor, or patch as a 2nd param');
   }
-  console.log('New Version Number: ' + major + '.' + minor + '.' + patch);
+ return ' + major + '.' + minor + '.' + patch;
 };
