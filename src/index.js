@@ -1,5 +1,4 @@
 /* eslint prefer-template: 0 */
-const fs = require('fs');
 const colors = require('colors');
 const logSymbols = require('log-symbols');
 
@@ -19,19 +18,28 @@ const printTime = '[ ' + timeIso + ' ]';
 
 // Debug method
 exports.debug = (obj) => {
-  const filePath = './logs/lincoln.log';
   const msg = '[ ' + obj.msg + ']';
   const info = obj.info;
   const success = 'finished successfully';
   const statement = obj.msg + obj.info + '\n';
 
   // DISPLAY only when DEBUG=true
-  if (process.env.DEBUG) {
-    // Write to log file
-    fs.appendFile(filePath, statement, { flag: 'a' },
-      (err) => { if (err) { throw err; } }
-    );// END of appendFile
-
+    if (process.env.DEBUG) {
+      if (msg === 'log') {
+        const log = statement + date + timeIso + printTime;
+        console.log(log);
+      } else if (msg === 'error') {
+        const error = statement + date + timeIso + printTime;
+        console.log(log);
+        console.error(error);
+      } else if (msg === 'warn') {
+        const warn = statement + date + timeIso + printTime;
+        console.warn(warn);
+      } else {
+        console.error('Fail');
+      }
+    }
+};
     if (obj.info === 'err' || obj.info === 'undefined') {
       throw console.log(logSymbols.fail, 'ERROR!');
     }
