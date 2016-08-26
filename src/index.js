@@ -69,4 +69,5 @@ exports.bump = (oldVersion, UpdateVersion) => {
   } else {
     console.warn('Enter major, minor, or patch as a 2nd param');
   }
+  return major + '.' + minor + '.' + patch;
 };
