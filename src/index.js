@@ -35,10 +35,7 @@ exports.debug = (obj) => {
       } else if (msg === 'warn') {
         const warn = statement + date + timeIso + printTime;
         console.warn(warn);
-      } else {
-        console.error('Fail');
-      }
-    }
+    };
     
     if (obj.info === 'err' || obj.info === 'undefined') {
       throw console.log(logSymbols.fail, 'ERROR!');
