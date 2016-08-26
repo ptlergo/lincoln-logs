@@ -9,10 +9,6 @@ npm install lincoln-logs --save-dev
 ```
 
 ## Usage
-Create a `log` folder in your project with the file `lincoln.log`. This will be to save all your debug messages.
-```
-/logs/lincoln.log
-```
 
 Require the tool package.
 ``` javascript
@@ -30,6 +26,36 @@ util.debug({msg: 'message', info: object })
 lincoln-logs runs only when the Environmental Variable 'DEBUG' is on.
 ```
 DEBUG=true
+```
+
+## Endpoints
+
+Log Message Displays if hit:
+```
+statement + date + timeIso + printTime
+Log Hit
+Aug 25,2016 11:18pm
+```
+
+Error Message Displays if hit:
+```
+statement + date + timeIso + printTime
+Error!!
+Aug 25,2016 11:18pm
+```
+
+Warn Message Displays if hit:
+```
+statement + date + timeIso + printTime
+Warning!!
+Aug 25,2016 11:18pm
+```
+
+Fail Message Displays if hit:
+```
+statement + date + timeIso + printTime
+Fail
+Aug 25,2016 11:18pm
 ```
 
 > visit my [app-store](https://github.com/ptlergo/App-Store) project to see it in action.  

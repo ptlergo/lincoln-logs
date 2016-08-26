@@ -35,11 +35,8 @@ exports.debug = (obj) => {
       } else if (msg === 'warn') {
         const warn = statement + date + timeIso + printTime;
         console.warn(warn);
-      } else {
-        console.error('Fail');
-      }
-    }
-};
+    };
+    
     if (obj.info === 'err' || obj.info === 'undefined') {
       throw console.log(logSymbols.fail, 'ERROR!');
     }
@@ -47,7 +44,6 @@ exports.debug = (obj) => {
     console.log('\n', printTime.prompt,
     '\n', msg.help, '\n ', info, '\n',
      '[ '.win, logSymbols.success, success.win, logSymbols.success, ' ]\n'.win);
-  }
 
   return obj;
 };
