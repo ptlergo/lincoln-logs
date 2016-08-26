@@ -47,3 +47,26 @@ exports.debug = (obj) => {
    }
   return obj;
 };
+
+// Version Number Increaser
+exports.bump = (oldVersion, UpdateVersion) => {
+  let major = oldVersion.major;
+  let minor = oldVersion.minor;
+  let patch = oldVersion.patch;
+  if (UpdateVersion) {
+    if (UpdateVersion === 'major') {
+      major += 1;
+      minor  = 0;
+      patch  = 0;
+    }
+    if (UpdateVersion === 'minor') {
+      minor += 1;
+      patch  = 0;
+    }
+    if (UpdateVersion === 'patch') {
+      patch += 1;
+    }
+  } else {
+    console.warn('Enter major, minor, or patch as a 2nd param');
+  }
+};
