@@ -36,11 +36,8 @@ exports.debug = (obj) => {
 
   return obj;
 };
-<<<<<<< HEAD
+
 // For the bumper functionally
-=======
-// For the bumper functionally
->>>>>>> enhance2
 exports.lincolnLogsBumper = (version, bump) => {
   let major;
   let minor;
