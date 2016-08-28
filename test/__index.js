@@ -21,4 +21,9 @@ describe('Util Tool', () => {
     expect(util.debug(testObj)).to.have.ownProperty('info');
     done();
   });
+
+// This is to test and see if the bumper works
+  util.lincolnLogsBumper('1.0.0', 'major');
+  util.lincolnLogsBumper('1.1.0', 'minor');
+  util.lincolnLogsBumper('1.0.1', 'patch');
 });// END of Util Tool describe
