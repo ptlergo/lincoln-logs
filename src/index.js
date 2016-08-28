@@ -36,7 +36,7 @@ exports.debug = (obj) => {
 
   return obj;
 };
-// For the bumper
+// For the bumper fuctionally
 exports.lincolnLogsBumper = (version, bump) => {
   let major;
   let minor;
