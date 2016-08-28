@@ -25,11 +25,6 @@ exports.debug = (obj) => {
 
   // DISPLAY only when DEBUG=true
   if (process.env.DEBUG) {
-    // Write to log file
-    fs.appendFile(filePath, statement, { flag: 'a' },
-      (err) => { if (err) { throw err; } }
-    );// END of appendFile
-
     if (obj.info === 'err' || obj.info === 'undefined') {
       throw console.log(logSymbols.fail, 'ERROR!');
     }
