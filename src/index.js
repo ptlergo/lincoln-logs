@@ -18,7 +18,6 @@ const printTime = '[ ' + timeIso + ' ]';
 
 // Debug method
 exports.debug = (obj) => {
-  // const filePath = './logs/lincoln.log';
   const msg = '[ ' + obj.msg + ']';
   const info = obj.info;
   const success = 'finished successfully';
