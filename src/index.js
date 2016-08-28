@@ -16,7 +16,7 @@ colors.setTheme({
 const date = new Date();
 const timeIso = date.toISOString();
 const printTime = '[ ' + timeIso + ' ]';
-// i changed tis
+
 // Debug method
 exports.debug = (obj) => {
   // const filePath = './logs/lincoln.log';
