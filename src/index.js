@@ -1,5 +1,4 @@
 /* eslint prefer-template: 0 */
-const fs = require('fs');
 const colors = require('colors');
 const logSymbols = require('log-symbols');
 
